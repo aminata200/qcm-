@@ -1,71 +1,55 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <title>QCM Interactif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;QCM Interactif&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.question {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.feedback {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;QCM Interactif&lt;/h1&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Question 1 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="question"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Question 1 :&lt;/strong&gt; Quelle courbe représente une taxe progressive ?&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://via.placeholder.com/300x150" alt="Graphique d'exemple"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="radio" name="q1" value="A"&gt; Courbe A&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="radio" name="q1" value="B"&gt; Courbe B&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;input type="radio" name="q1" value="C"&gt; Courbe C&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="checkAnswer1()"&gt;Vérifier la réponse&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="feedback1" class="feedback"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Script pour réponse immédiate --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function checkAnswer1() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const answer = document.querySelector('input[name="q1"]:checked');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const feedback = document.getElementById('feedback1');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (!answer) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>feedback.textContent = "Veuillez sélectionner une réponse.";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>feedback.style.color = "red";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (answer.value === "B") {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>feedback.textContent = "Bonne réponse !";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>feedback.style.color = "green";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>feedback.textContent = "Mauvaise réponse. Essayez encore.";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>feedback.style.color = "red";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <h1>QCM Interactif</h1>
+
+  <!-- Question 1 -->
+  <div class="question">
+    <p><strong>Question 1 :</strong> Quelle courbe représente une taxe progressive ?</p>
+    <img src="https://via.placeholder.com/300x150" alt="Graphique d'exemple">
+    <ul>
+      <li><input type="radio" name="q1" value="A"> Courbe A</li>
+      <li><input type="radio" name="q1" value="B"> Courbe B</li>
+      <li><input type="radio" name="q1" value="C"> Courbe C</li>
+    </ul>
+    <button onclick="checkAnswer1()">Vérifier la réponse</button>
+    <p id="feedback1" class="feedback"></p>
+  </div>
+
+  <!-- Script pour réponse immédiate -->
+  <script>
+    function checkAnswer1() {
+      const answer = document.querySelector('input[name="q1"]:checked');
+      const feedback = document.getElementById('feedback1');
+      if (!answer) {
+        feedback.textContent = "Veuillez sélectionner une réponse.";
+        feedback.style.color = "red";
+        return;
+      }
+      if (answer.value === "B") {
+        feedback.textContent = "Bonne réponse !";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "Mauvaise réponse. Essayez encore.";
+        feedback.style.color = "red";
+      }
+    }
+  </script>
 </body>
 </html>
